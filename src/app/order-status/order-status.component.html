@@ -1,0 +1,19 @@
+<p>Channel 1 : {{channelInName}}</p>
+<div class="messagelist"*ngFor="let m of messagelist ">  
+   {{ m.msg }}  
+</div>
+<span>
+    <div class="container">
+        <div class="row">
+          <div class="col-xs-3 col-sm-3 col-md-3 tile" *ngFor="let itm of items">
+             <h3>
+               {{itm.name}}
+             </h3>
+             <p>
+              <b title="Total Orders for {{itm.name}} status">Orders:</b> {{itm.OrderCount}} | <b title="Total System Quantity">Units:</b> {{itm.OrderUnit}}
+             </p>
+           </div>
+        </div>
+         
+      </div>
+</span>

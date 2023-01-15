@@ -1,0 +1,26 @@
+
+<nav id="sidebarMenu" class="col-md-3 col-lg-2 d-md-block bg-light sidebar collapse mt-3">
+    <div class="position-sticky pt-3">
+      <ul class="nav flex-column">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" routerLink="home">
+            <i class="bi bi-house-door"></i>
+            Home
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="order-status">
+            <i class="bi bi-menu-up"></i>
+            Order Status
+
+            <li class="nav-item" *ngFor="let chItems of channelItems">
+                <a class="nav-link" routerLink="{{chItems.RouteChannel}}" (click)="handleMenuClick(chItems.ChannelName)">
+                  <i class="bi bi-view-list"></i>
+                   {{chItems.ChannelName}}
+                </a>
+              </li>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </nav>
